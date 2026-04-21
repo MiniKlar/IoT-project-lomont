@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wil-app
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  containers:
+    - image: wil42/playground:v2
+      name: wil-app
+      ports:
+        - containerPort: 8888
